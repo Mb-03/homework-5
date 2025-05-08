@@ -1,0 +1,241 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Code */
+
+/* font */
+
+@font-face {
+  font-family: "LexenDeca";
+  src: url("../assets/fonts/LexendDeca.ttf");
+}
+
+/* Variables */
+
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #232340;
+  --btn-color: #5468e750;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "LexenDeca", Courier, monospace;
+}
+
+body {
+  width: 100%;
+}
+
+/* Header */
+
+header {
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 140px;
+  align-items: center;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 56px;
+}
+
+.main-nav ul a {
+  text-decoration: underline;
+  font-weight: medium;
+  line-height: 150%;
+  color: var(--text-color);
+}
+
+/* Button  */
+
+#btn {
+  background-color: var(--btn-color);
+  padding: 10px 44px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Burger menu */
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-color);
+}
+
+/* Hover effects */
+
+.main-nav ul a:hover {
+  font-weight: bold;
+}
+
+/* აქტიურ ლინკს რომ მიენიჭოს მარტო სტილი */
+
+#active {
+  font-weight: bold;
+}
+
+#btn:hover {
+  box-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.25);
+  transition: 0.4s;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 100px;
+  text-align: center;
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 1023px) {
+  header {
+    padding: 30px;
+    max-width: none;
+  }
+
+  .main-nav ul {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}
