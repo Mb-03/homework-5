@@ -203,9 +203,29 @@ main {
   width: 24px;
   height: 24px;
   cursor: pointer;
+  
 }
 
+
+/* Burger Menu hover */
+
+.burger-menu:hover .menu-1 {
+  transform: translateY(350%) rotate(45deg);
+}
+
+.burger-menu:hover .menu-2 {
+  display: none;
+}
+
+.burger-menu:hover .menu-3 {
+  transform: translateY(-350%) rotate(-45deg); 
+  
+}
+
+
+
 .burger-menu span {
+  transition: 0.4s ease;
   width: 100%;
   height: 3px;
   background-color: var(--text-color);
@@ -417,6 +437,105 @@ h1 {
   cursor: pointer;
 }
 
+/* Blog */
+
+.blog-hero {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.blog-avatar-list {
+  display: flex;
+  gap: 30px;
+}
+
+.blog-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--text-color);
+  transition: 0.5s;
+}
+
+.blog-avatar:hover {
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.25);
+}
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  width: 100%;
+  max-width: 1000px;
+  padding: 12px 22px;
+  margin: 50px auto;
+  border: 2px solid var(--text-color);
+  border-radius: 22px;
+}
+
+
+.article {
+  display: flex;
+  
+}
+
+
+
+.article-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 10%;
+  border-right: 1px solid var(--text-color);
+  padding-right: 20px;
+  text-align: center;
+}
+
+.article-mid {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 32px;
+  gap: 20px;
+  max-width: 80%;
+  border-right: 1px solid var(--text-color);
+}
+
+.article-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 10%;
+}
+
+.article a {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.blog-star {
+  width: 50px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Log In  */
 
 .login {
@@ -548,7 +667,7 @@ footer {
   width: 100%;
   margin: 0 auto;
   justify-content: space-between;
-  padding: 20px 20px;
+  padding: 20px;
 }
 
 .footer-links {
@@ -607,9 +726,10 @@ footer {
     padding: 0;
   }
 
-  img {
-    object-fit: cover;
-    width: 100%;
+  .logo-img-footer img {
+    width: 100px;
+    height: 50px;
+    
   }
 
   main {
@@ -654,7 +774,7 @@ footer {
   }
 
   .logo-img-footer {
-    padding: 20px;
+    
     margin: 0;
     
     
@@ -668,11 +788,11 @@ footer {
 
   .footer-wrapper {
     display: flex;
-    max-width: 1440px;
+    max-width: none;
+    margin: 0;
     width: 100%;
-    margin: 0 auto;
-    justify-content: space-between;
-    padding: 20px 20px;
+    padding: 0;
+    
   }
 
   .footer-links {
